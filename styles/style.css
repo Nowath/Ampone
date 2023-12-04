@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+    scroll-behavior: smooth;
+    cursor: context-menu;
+}
+.Container {
+    max-width: 100dvw;
+    height: 100dvh;
+    overflow: auto;
+    position: relative;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.FristPage {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+}
+.Intropage {
+    height: 92dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    & img {
+        width: 300px;
+        border-radius: 50%;
+        padding: 0.5rem;
+        border: 0.3rem solid #ff67a4;
+        transition: all 0.3s;
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+    & h1 {
+        color: white;
+        padding: 0.5rem;
+        text-shadow: 1px 1px 10px rgb(255, 88, 210);
+        text-align: center;
+    }
+}
+.finisher-header {
+    height: 100dvh !important;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    z-index: 1;
+}
+.navbars {
+    width: 99%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.64);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbars .nav-header {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    & img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+}
+.nav-lists {
+    display: flex;
+    list-style: none;
+}
+.nav-lists li {
+    padding: 0 20px;
+    transition: all 0.3s;
+}
+.nav-lists li a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.nav-lists li:nth-child(1) a:hover {
+    color: #0866ff;
+}
+.nav-lists li:nth-child(2) a:hover {
+    color: #474747;
+}
+.nav-lists li:nth-child(3) a:hover {
+    color: #ff0000;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    justify-items: center;
+}
+.card {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.53);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+}
+.card:hover {
+    transform: scale(1.1, 1.1);
+}
+.card .cardimage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+.card .cardimage img {
+    object-fit: cover;
+    width: 100%;
+}
+.card .cardimage a {
+    text-decoration: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 50%;
+    & i {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.card .Cardcontent {
+    padding: 1.5rem;
+}
+.card .Cardcontent .cardheader {
+    font-size: 30px;
+    padding: 5px 0;
+}
+.card .Cardcontent .cardprop {
+    height: 150px;
+    overflow-y: auto;
+}
+.card .Cardcontent .cardprop::-webkit-scrollbar {
+    width: 5px;
+}
+.card .Cardcontent .cardprop::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+}
+footer {
+    height: 10rem;
+}
+@media (max-width: 1306px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 876px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 460px) {
+    .navbars .nav-header {
+        display: none;
+    }
+    .nav-lists li {
+        padding: 0 15px;
+        transition: all 0.3s;
+    }
+    .Intropage img {
+        width: 200px;
+    }
+    .Intropage h1:nth-child(2),
+    .Intropage h1:nth-child(3) {
+        font-size: 25px;
+    }
+    .card {
+        width: 300px;
+    }
+    .card .cardimage {
+        height: 200px;
+    }
+}

@@ -1,5 +1,5 @@
 new FinisherHeader({
-    count: 3,
+    count: 5,
     size: {
         min: 1300,
         max: 1500,

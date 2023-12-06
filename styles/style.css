@@ -199,6 +199,9 @@ footer {
     .navbars .nav-header {
         display: none;
     }
+    .card .Cardcontent {
+        padding: 1rem;
+    }
     .nav-lists li {
         padding: 0 15px;
         transition: all 0.3s;
@@ -214,6 +217,6 @@ footer {
         width: 300px;
     }
     .card .cardimage {
-        height: 200px;
+        min-height: 200px;
     }
 }

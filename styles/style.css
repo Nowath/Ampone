@@ -20,6 +20,22 @@
     width: 100%;
     padding: 2rem;
 }
+.Intropage img{
+    width: 300px;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 0.3rem solid #ff67a4;
+    transition: all 0.3s;
+}
+.Intropage img:hover{
+    transform: rotate(360deg);
+}
+.Intropage h1{
+    color: white;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 10px rgb(255, 88, 210);
+    text-align: center;
+}
 .Intropage {
     height: 92dvh;
     width: 100%;
@@ -28,22 +44,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    & img {
-        width: 300px;
-        border-radius: 50%;
-        padding: 0.5rem;
-        border: 0.3rem solid #ff67a4;
-        transition: all 0.3s;
-        &:hover {
-            transform: rotate(360deg);
-        }
-    }
-    & h1 {
-        color: white;
-        padding: 0.5rem;
-        text-shadow: 1px 1px 10px rgb(255, 88, 210);
-        text-align: center;
-    }
 }
 .finisher-header {
     height: 100dvh !important;
@@ -77,15 +77,15 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    & img {
-        width: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-    & a {
-        text-decoration: none;
-        color: black;
-    }
+}
+.navbars .nav-header a{
+    text-decoration: none;
+    color: black;
+}
+.navbars .nav-header img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 .nav-lists {
     display: flex;
@@ -157,12 +157,11 @@ nav {
     background-color: red;
     cursor: pointer;
     border-radius: 50%;
-    & i {
-        color: white;
-        cursor: pointer;
-    }
 }
-
+.card .cardimage a i{
+    color: white;
+    cursor: pointer;
+}
 .card .Cardcontent {
     padding: 1.5rem;
 }

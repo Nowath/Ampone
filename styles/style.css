@@ -55,7 +55,6 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
-    height: 80px;
     z-index: 1;
 }
 .navbars {
